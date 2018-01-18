@@ -3,6 +3,7 @@ java 学习
 ## stage 1  Java 语言快速入门
 <https://www.ctolib.com/docs-java-c-index.html>
 <https://www.ctolib.com/docs-java-c-object-classes.html>  2018年01月07日23:56:07
+<https://www.ctolib.com/docs-java-c-basic-datatypes.html> 2018年01月18日23:42:44
 
 ## stage 1.5 JSP 教程
 <https://www.ctolib.com/docs-jsp-c-index.html>
