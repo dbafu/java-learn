@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Session示例</title>
+<title>Session示例 01</title>
 </head>
 <body>
-		Session 示例。。。
+		Session 示例。。。 <br />
+		Session 的唯一标识符 ：<%= session.getId() %> <br />
+		Session 的创建时间 ： <%= new java.util.Date(session.getCreationTime()).toString() %> <br />
+		Session 的最后访问时间： <%=  new java.util.Date(session.getLastAccessedTime()).toString() %> <br />
+		Session 的失效时间： <%= session.getMaxInactiveInterval() %> <br />
+		
+		
 </body>
 </html>
