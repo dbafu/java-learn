@@ -45,6 +45,18 @@
 		<url-pattern>/checkServlet</url-pattern>
 	</servlet-mapping>
 	<filter>
+		<filter-name>FilterTwo</filter-name>
+		<filter-class>com.jikexueyuan.filter.FilterTwo</filter-class>
+		<init-param>
+			<param-name>param</param-name>
+			<param-value>jikexueyuan</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterTwo</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
 		<filter-name>FilterOne</filter-name>
 		<filter-class>com.jikexueyuan.filter.FilterOne</filter-class>
 		<init-param>
@@ -56,6 +68,7 @@
 		<filter-name>FilterOne</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
