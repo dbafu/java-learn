@@ -33,6 +33,12 @@ public class LoginServlet extends HttpServlet {
         String userName = req.getParameter("uname");
         String password = req.getParameter("upwd");
 
+        if (userName != "" && userName.equals("ftf") && password != "" && password.equals("123456")) {
+            resp.sendRedirect(req.getContextPath() + "/17/success.jsp");
+        } else {
+            resp.sendRedirect(req.getContextPath() + "/17/error.jsp");
+        }
+
         System.out.println("用户名 ==> " + userName);
         System.out.println("密码 ==> " + password);
     }
