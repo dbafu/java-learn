@@ -21,7 +21,6 @@ public class CheckUserService {
             ResultSet resultSet = userDao.get(conn, user);
             while (resultSet.next()) {
                 return true;
-
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -38,27 +38,34 @@ public class CheckServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("===== 进入 doPost =====");
         String uname = request.getParameter("uname");
         String upwd = request.getParameter("upwd");
+
+        System.out.println("uname : " + uname);
+        System.out.println("password : " + upwd);
 
         RequestDispatcher rd = null;
         String forward = null;
 
         if (uname == null && upwd == null) {
             request.setAttribute("msg", "用户名或者密码为空！");
-            rd = request.getRequestDispatcher("/17/error.jsp");
+            rd = request.getRequestDispatcher("/18/error.jsp");
             rd.forward(request, response);
         } else {
             User user = new User();
             user.setName(uname);
             user.setPassword(upwd);
+            System.out.println(user.toString());
 
             boolean bool = cku.check(user);
             if (bool) {
-                forward = "/17/success.jsp";
+                System.out.println("=====验证成功=====");
+                forward = "/18/success.jsp";
             } else {
+                System.out.println("=====验证失败=====");
                 request.setAttribute("msg", "用户名或者密码输入错误，请重新输入!");
-                forward = "/17/error.jsp";
+                forward = "/18/error.jsp";
             }
             rd = request.getRequestDispatcher(forward);
             rd.forward(request, response);
