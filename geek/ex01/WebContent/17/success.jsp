@@ -10,7 +10,7 @@
 	登陆成功 ! <br />
 	请提交的信息为：<br />
 	用户名：<%= request.getParameter("uname") %> <br />
-	密码：<%= request.getParameter("password") %> <br />
-	<a href="login.jsp">返回登录页面</a>
+	密码：<%= request.getParameter("upwd") %> <br />
+	<a href="/17/login.jsp">返回登录页面</a>
 </body>
 </html>

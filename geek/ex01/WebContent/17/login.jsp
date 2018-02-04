@@ -7,8 +7,8 @@
 <title>登录页面</title>
 </head>
 <body>
-<%-- 	<form action="<%= request.getContextPath() %>/loginServlet" method="post"> --%>
-	<form action="<%= request.getContextPath() %>/loginServlet" method="get">
+	<form action="<%= request.getContextPath() %>/loginServlet" method="post">
+<%-- 	<form action="<%= request.getContextPath() %>/loginServlet" method="get"> --%>
 		userName:
 		<input type="text" name="uname" />
 		<br />
