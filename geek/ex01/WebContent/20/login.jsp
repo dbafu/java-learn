@@ -29,6 +29,9 @@ body {
 </head>
 <body>
 	<form action="<%= request.getContextPath() %>/loginServlet20" method="post" name="loginForm">
+		<%if(request.getParameter("return_uri") != null){ %>
+			<input type="hidden" name="return_uri" value="<%= request.getParameter("return_uri") %>"/>
+		<%} %>
 		<table border="1" cellspacing="0" cellpadding="5" bordercolor="silver" align="center">
 			<tr>
 				<td colspan="2" align="center" bgcolor="#e8e8e8">用户登录</td>
