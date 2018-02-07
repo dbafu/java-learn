@@ -89,6 +89,15 @@
 		</init-param>
 	</filter>
 	<filter>
+		<filter-name>PermissionFilter</filter-name>
+		<filter-class>com.jikexueyuan.filter.PermissionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PermissionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
 		<filter-name>EncodingFilter</filter-name>
 		<filter-class>com.jikexueyuan.filter.EncodingFilter</filter-class>
 		<init-param>

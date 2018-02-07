@@ -17,5 +17,8 @@ JSP表达式输出： <%="Hello tengfei!" %>
 // 	String str = "Hello JSP";
 	out.println(str);
 %>
+<br />
+<a href="<%= request.getContextPath() %>/20/index.jsp">Index Jsp</a> <br />
+
 </body>
 </html>
